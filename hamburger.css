@@ -1,0 +1,56 @@
+.hamburger-container {
+    --hamburger-size: 1.5rem;
+    display: none;
+    height: var(--hamburger-size);
+    width: var(--hamburger-size);
+}
+
+.hamburger-icon {    
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+}
+
+.hamburger-checkbox {
+    cursor: pointer;
+    position: absolute;
+    width: var(--hamburger-size);
+    height: var(--hamburger-size);
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+}
+
+.hamburger-icon span {
+    height: 14.286%;
+    width: 100%;
+    background-color: black;
+    display: block;
+    margin-bottom: 14.286%;
+    transition: all .7s;
+    transform: none;
+}
+
+.hamburger-icon span:last-child {
+    margin-bottom: 0;
+}
+
+.hamburger-checkbox:checked + .hamburger-icon span:first-child {
+    opacity: 0;
+}
+
+.hamburger-checkbox:checked + .hamburger-icon span:last-child {
+    opacity: 0;
+}
+
+.hamburger-checkbox:checked + .hamburger-icon span:nth-of-type(2) {
+    transform: translateY(100%) rotate(-45deg);
+    background-color: rgb(255, 0, 0);
+}
+
+.hamburger-checkbox:checked + .hamburger-icon span:nth-of-type(3) {
+    transform: translateY(-100%) rotate(45deg);
+    background-color: red;
+
+}
